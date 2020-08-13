@@ -50,6 +50,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -74,6 +75,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &5998248733810857193
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -182,3 +184,4 @@ MonoBehaviour:
   target: {fileID: 0}
   playerTarget: {fileID: 0}
   damage: 10
+  explosionRadius: 10

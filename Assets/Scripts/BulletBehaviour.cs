@@ -15,7 +15,7 @@ public class BulletBehaviour : MonoBehaviour
 
     public float damage = 10f;
 
-    public float explosionRadius = 50;
+    public float explosionRadius = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,7 @@ public class BulletBehaviour : MonoBehaviour
     {
         ParticleSystem explosion = Instantiate(hitSparkPrefab, transform.position, Quaternion.identity);
         explosion.Play();
-        if (target != null && (target.transform.position - transform.position).magnitude <= 10)
+        if (target != null && (target.transform.position - transform.position).magnitude <= explosionRadius)
         {
             target.damage(damage);
         }

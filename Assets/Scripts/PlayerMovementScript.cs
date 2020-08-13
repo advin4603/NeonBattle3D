@@ -30,13 +30,19 @@ public class PlayerMovementScript : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody>();
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     void Update()
     {
         horizontalInput = Input.GetAxisRaw("Mouse X");
         verticalInput = -Input.GetAxisRaw("Mouse Y");
         rollInput = Input.GetAxis("Roll");
+        if (Input.GetButton("Look"))
+        {
+            horizontalInput = 0;
+            verticalInput = 0;
+            rollInput = 0;
+        }
 
         thrustDir = Input.GetAxis("Thrust");
 
